@@ -1,12 +1,13 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
-import { tracked } from "@glimmer/tracking";
+import { tracked } from '@glimmer/tracking';
 
 export default class Ex1Controller extends Controller {
   @tracked content = 'valeur par default';
   @tracked info = '';
   @tracked styles = '';
 
+  list = [];
   const;
   MAX = 100;
 
@@ -39,7 +40,9 @@ export default class Ex1Controller extends Controller {
   save() {
     if (this.content.length > 0) {
       this.info = 'Note sauvegardée';
+      this.list.push(this.content.toString());
       this.styles = 'alert alert-success';
+      console.log(this.list);
     } else {
       this.info = '';
     }
