@@ -4,13 +4,13 @@
     Ex 1 : Note application
   </div>
   <div class="card-body">
-    <Textarea class="form-control mb-3" rows="4" @value={{this.content}} @input={{this.update}}/>
+    <Textarea class="form-control mb-3" rows="4" maxlength="100" @value={{this.content}} @input={{this.update}}/>
 
     <button class="btn btn-primary" type="button" {{on "click" this.save}}>Sauvegarder</button>
     <button class="btn btn-primary" type="button" {{on "click" this.clear}}>Effacer</button>
 
-    <div class="alert {{this.style}}">Il vous rest {{this.size}} caractères à saisir</div>
-    <div class="alert alert-info"> {{this.info}}</div>
+    <div class="alert alert-info">Il vous rest {{this.size}} caractères à saisir</div>
+    <div class={{this.style}}> {{this.info}}</div>
   </div>
 </div>
 {{outlet}}
