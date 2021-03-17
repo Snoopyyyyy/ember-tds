@@ -8,10 +8,10 @@ use Ubiquity\attributes\items\router\Post;
 use Ubiquity\attributes\items\router\Put;
 use Ubiquity\attributes\items\router\Route;
 use Ubiquity\attributes\items\rest\Rest;
-use Ubiquity\controllers\rest\RestServer;
+
 #[Rest()]
-#[Route(path: "/rest/")]
-class MrRestController extends \Ubiquity\controllers\rest\api\json\JsonRestController {
+#[Route(path: "/rest")]
+class MyRestController extends \Ubiquity\controllers\rest\api\json\JsonRestController {
 
 	/**
 	 * Returns all the instances from the model $resource.
@@ -90,10 +90,4 @@ class MrRestController extends \Ubiquity\controllers\rest\api\json\JsonRestContr
 	public function update($resource,...$id ){
 		parent::update_($resource,...$id);
 	}
-
-	protected function getRestServer(): RestServer {
-        $srv=parent::getRestServer();
-        $srv->setAllowedOrigin('http://127.0.0.1:4200');
-        return $srv;
-    }
 }
