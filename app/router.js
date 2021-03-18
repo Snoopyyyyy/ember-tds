@@ -15,4 +15,5 @@ Router.map(function () {
   });
 
   this.route('section', function() {});
+  this.route('board');
 });

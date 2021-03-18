@@ -15,7 +15,7 @@ export default class IndexRoute extends Route {
           employee = employee.firstObject;
           if (employee.password && employee.password === password) {
             self.userAuth.login(employee);
-            self.transitionTo('section');
+            self.transitionTo('board');
           }
         }
       }); // Select * from employee where email = user.email
