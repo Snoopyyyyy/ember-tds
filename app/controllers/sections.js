@@ -7,6 +7,10 @@ export default class SectionsController extends Controller {
 
   @action
   toggle(id) {
-    this.activeSection = id;
+    if (this.activeSection === id) {
+      this.activeSection = null;
+    } else {
+      this.activeSection = id;
+    }
   }
 }

@@ -13,3 +13,19 @@
 .bglight {
   background-color: #EaEaEa!important;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.apparition {
+  display: table-row;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
+}
