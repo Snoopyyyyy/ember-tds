@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd9ce3f-8218-4391-974f-60398f86198b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/employee.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/models/employee-test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/sections.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit/models/sections-test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/board.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/application.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-api/.ubiquity/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/store-api/.ubiquity/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-api/app/cache/controllers/rest.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/store-api/app/cache/controllers/rest.cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-api/app/cache/controllers/routes.rest.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/store-api/app/cache/controllers/routes.rest.cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-api/app/controllers/MyRestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/store-api/app/controllers/MyRestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/board.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/board.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,19 @@
       <workItem from="1615986005371" duration="1067000" />
       <workItem from="1615987816030" duration="1796000" />
       <workItem from="1615989624894" duration="1867000" />
-      <workItem from="1615991641355" duration="656000" />
+      <workItem from="1615991641355" duration="1694000" />
+      <workItem from="1616023695619" duration="1636000" />
+      <workItem from="1616054993840" duration="1800000" />
+      <workItem from="1616065290363" duration="1805000" />
+      <workItem from="1616067156793" duration="1788000" />
+      <workItem from="1616069162985" duration="661000" />
+      <workItem from="1616074374332" duration="1794000" />
+      <workItem from="1616076181003" duration="1931000" />
+      <workItem from="1616078123734" duration="1207000" />
+      <workItem from="1616422806202" duration="1741000" />
+      <workItem from="1616588458377" duration="1792000" />
+      <workItem from="1616590259721" duration="1797000" />
+      <workItem from="1616592066682" duration="1134000" />
     </task>
     <servers />
   </component>

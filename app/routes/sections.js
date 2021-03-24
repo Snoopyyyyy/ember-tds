@@ -1,5 +1,19 @@
 import Abstractroute from './Abstractroute';
+import { action } from '@ember/object';
 
 export default class SectionsRoute extends Abstractroute {
+  model() {
+    this.redirect();
+  }
 
+  @action
+  logout() {
+    this.userAuth.logout();
+    this.transitionTo('index');
+  }
+
+  @action
+  goBoard() {
+    this.transitionTo('board');
+  }
 }

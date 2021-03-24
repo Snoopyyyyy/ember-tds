@@ -22,4 +22,9 @@ export default class BoardRoute extends Abstractroute {
     this.userAuth.logout();
     this.transitionTo('index');
   }
+
+  @action
+  goStore() {
+    this.transitionTo('sections');
+  }
 }
