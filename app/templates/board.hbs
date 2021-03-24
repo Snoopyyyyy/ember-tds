@@ -16,31 +16,31 @@
     </div>
   </div>
 </div>
-<div class="ui container temp1">
-  <div class="ui grid container">
-    <table class="ui celled table">
+
+<div class="ui container segment bglight">
+  <h1>Commande</h1>
+  <table class="ui celled table">
+    <tr class="center aligned">
+      <th>Client</th>
+      <th>Date de Commande</th>
+      <th>Statut</th>
+      <th>Nombre de colis</th>
+      <th>A payé</th>
+      <th>Quantité</th>
+      <th>Quantité manquant</th>
+    </tr>
+    {{#each @model as |val|}}
       <tr class="center aligned">
-        <th>Client</th>
-        <th>Date de Commande</th>
-        <th>Statut</th>
-        <th>Nombre de colis</th>
-        <th>A payé</th>
-        <th>Quantité</th>
-        <th>Quantité manquant</th>
+        <td>{{val.user.name}}</td>
+        <td>{{moment-format val.dateCreation 'LLLL'}}</td>
+        <td>{{val.status}}</td>
+        <td>{{val.amount}}</td>
+        <td>{{val.toPay}}</td>
+        <td>{{val.itemsNumber}}</td>
+        <td>{{val.missingNumber}}</td>
       </tr>
-      {{#each @model as |val|}}
-        <tr class="center aligned">
-          <td>{{val.user.name}}</td>
-          <td>{{moment-format val.dateCreation 'LLLL'}}</td>
-          <td>{{val.status}}</td>
-          <td>{{val.amount}}</td>
-          <td>{{val.toPay}}</td>
-          <td>{{val.itemsNumber}}</td>
-          <td>{{val.missingNumber}}</td>
-        </tr>
-      {{/each}}
-    </table>
-  </div>
+    {{/each}}
+  </table>
 </div>
 
 {{outlet}}

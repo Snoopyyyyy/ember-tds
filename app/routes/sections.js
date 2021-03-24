@@ -4,6 +4,7 @@ import { action } from '@ember/object';
 export default class SectionsRoute extends Abstractroute {
   model() {
     this.redirect();
+    return this.store.findAll('section', { include: 'products' });
   }
 
   @action
