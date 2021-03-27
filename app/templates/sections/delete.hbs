@@ -19,9 +19,14 @@
 
 <div class="ui container segment bglight">
   <h1 class="ui header">
-    <div class="content">
-      {{@model}}
-    </div>
+    <div class="content">{{@model.section.name}}</div>
   </h1>
+  <div class="ui segment">
+    <h5 class="marginBotL">Voulez-vous vraiment supprimer cette section ainsi que ces {{@model.products.length}} produits ?</h5>
+      <div class="ui centered grid marginBotLL">
+        <button class="ui button positive" {{action "delete" true}}>Supprimer</button>
+        <button class="ui button negative" {{action "delete" false}}>Annuler</button>
+      </div>
+  </div>
 </div>
 {{outlet}}

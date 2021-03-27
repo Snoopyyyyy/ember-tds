@@ -1,20 +1,31 @@
 import Abstractroute from '../Abstractroute';
+import { action } from '@ember/object';
 
 export default class SectionsDeleteRoute extends Abstractroute {
   myId;
   section;
+  products;
   model(params) {
+    this.redirect();
     this.myId = params.section_id;
-    this.store
-      .query('section', { filter: { id: params.section_id } })
-      .then((section) => {
-        this.section = section;
-        console.log(this.section);
-      });
-    return this.section;
+    this.section = this.store.peekRecord('section', params.section_id);
+    this.products = this.store.query('product', {
+      filter: { idSection: params.section_id },
+    });
+    let result = {};
+    result.products = this.products;
+    result.section = this.section;
+    return result;
   }
 
-  get section() {
-    return this.section;
+  @action
+  delete(bool) {
+    if (bool) {
+      this.products.forEach(function(item) {
+        item.destroyRecord();
+      });
+      this.section.destroyRecord();
+    }
+    this.transitionTo('sections');
   }
 }

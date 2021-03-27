@@ -1,6 +1,5 @@
 import Abstractroute from '../Abstractroute';
 import { action } from '@ember/object';
-import { tracked } from '@glimmer/tracking';
 
 export default class SectionsEditRoute extends Abstractroute {
   myId;
