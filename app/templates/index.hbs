@@ -1,5 +1,10 @@
 {{page-title "Index"}}
-<Input @value={{email}}/>
-<Input @value={{password}}/>
-<button {{action "login" email password}}>Connection</button>
+<div class="ui container segment centered aligned">
+  <h1>Connexion</h1>
+  <form class="ui centered aligned">
+    <Input @value={{email}}/><br>
+    <Input @value={{password}}/><br>
+    <button {{action "login" email password}}>Connection</button>
+  </form>
+</div>
 {{outlet}}

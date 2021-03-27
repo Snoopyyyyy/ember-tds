@@ -25,6 +25,6 @@ export default class BoardRoute extends Abstractroute {
 
   @action
   goStore() {
-    this.transitionTo('sections');
+    this.transitionTo('sections.index');
   }
 }

@@ -1,4 +1,4 @@
-{{page-title "Sections"}}
+{{page-title "Section"}}
 <div class="ui basic inverted violet segment temp">
   <div class="ui secondary menu">
     <div class="ui right item">
@@ -18,40 +18,48 @@
 </div>
 
 <div class="ui container segment bglight">
-  <h1>Section</h1>
+  <h1 class="ui header">
+    <div class="content">
+      Sections
+    </div>
+  </h1>
   <div class="ui segment">
     <button {{action "AddSection"}} class="ui positive button ">Ajouter une nouvelle section</button>
     <button {{action "AddProduct"}} class="ui positive button ">Ajouter un nouveau produit</button>
-    <div class="ui temp2">
+    {{outlet "add"}}
+    <div class="ui marginTopL">
       <div class="ui">
         <table class="ui very basic table ">
           {{#each @model as |section|}}
             <tr>
               <td class="ui collapsing ">
-                <i class="ui edit icon"></i>
-                <i class="ui eraser icon"></i>
+                <LinkTo class="ui mini icon primary button" @route="sections.edit" @model={{section.id}}>
+                  <i class="ui edit icon"></i>
+                </LinkTo>
+                <LinkTo class="ui mini icon red button" @route="sections.delete" @model={{section.id}}>
+                  <i class="ui eraser icon"></i>
+                </LinkTo>
               </td>
               {{#if (eq section.id this.activeSection)}}
-                <td {{action "toggle" section.id}} class="clickable"><a><i class="ui angle double down icon"></i>{{section.name}}</a></td>
+                <td {{action "toggle" section.id}} class="clickable"><a><i class="ui angle double down icon"></i>{{section.name}} {{this.activateSection}}</a></td>
               {{else}}
                 <td {{action "toggle" section.id}} class="clickable"><a><i class="ui angle double right icon"></i>{{section.name}}</a></td>
               {{/if}}
             </tr>
-              <tr class="apparition {{if (eq section.id this.activeSection) '' 'hidden'}}">
-                <td></td>
-                <td>
-                  <ul>
-                    {{#each section.products as |product|}}
-                      <li>{{product.name}} -> {{product.price}}€</li>
-                    {{/each}}
-                  </ul>
-                </td>
-              </tr>
+            <tr class="{{if (eq section.id this.activeSection) 'apparition' 'hidden'}}">
+              <td></td>
+              <td>
+                <ul>
+                  {{#each section.products as |product|}}
+                    <li>{{product.name}} -> {{product.price}}€</li>
+                  {{/each}}
+                </ul>
+              </td>
+            </tr>
           {{/each}}
         </table>
       </div>
     </div>
   </div>
 </div>
-
 {{outlet}}

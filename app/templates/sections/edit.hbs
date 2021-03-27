@@ -1,2 +1,46 @@
 {{page-title "Edit"}}
+<div class="ui basic inverted violet segment temp">
+  <div class="ui secondary menu">
+    <div class="ui right item">
+      <button {{action "logout"}} class="ui primary button ali">Déconnection</button>
+    </div>
+  </div>
+</div>
+<div class="ui basic inverted black segment temp">
+  <div class="ui secondary menu">
+    <div class="ui item">
+      <h1 class="ui grey inverted header">Sections</h1>
+    </div>
+    <div class="ui right item">
+      <button {{action "goBoard"}} class="ui positive button">Retour au board</button>
+    </div>
+  </div>
+</div>
+
+<div class="ui container segment bglight">
+  <h1 class="ui header">
+    <div class="content">
+      Section {{@model.name}}
+    </div>
+    <button {{action "back"}} class="ui grey button right floated">Retour</button>
+  </h1>
+  <div class="ui segment">
+    <button {{action "AddProduct"}} class="ui positive button ">Ajouter un nouveau produit</button>
+    <button {{action "cancel"}} class="ui positive button right floated">Annuler</button>
+    <button {{action "save"}} class="ui negative button right floated ">Suprimer {{this.nb}}</button>
+    <div class="ui marginTopL">
+      <div class="ui">
+        <table class="ui very basic table ">
+          {{#each @model.products as |product|}}
+            <tr class="{{if product.isDeleted 'negative' ''}} ">
+              <td>{{product.name}}t</td>
+              <td class="right aligned collapsing"><button class="ui secondary mini button">Modifier ...</button></td>
+              <td class="right aligned collapsing"><button {{action "delete" product}} class="ui icon red mini button">X</button></td>
+            </tr>
+          {{/each}}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 {{outlet}}

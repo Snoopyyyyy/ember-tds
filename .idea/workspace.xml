@@ -2,17 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd9ce3f-8218-4391-974f-60398f86198b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/sections.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/models/sections-test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/sections/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/sections/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/sections/index.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit/controllers/sections/index-test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit/routes/sections/index-test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/sections.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/board.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/sections.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections/add-product.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/add-product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/application.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/board.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/board.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/sections.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/add-product.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/add-product.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/delete.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/delete.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/edit.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/edit.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/controllers/sections-test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +38,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1nbocsh9YA7OB1aVowvDrUWWIib" />
   <component name="ProjectLevelVcsManager">
@@ -88,7 +106,26 @@
       <workItem from="1616422806202" duration="1741000" />
       <workItem from="1616588458377" duration="1792000" />
       <workItem from="1616590259721" duration="1797000" />
-      <workItem from="1616592066682" duration="1134000" />
+      <workItem from="1616592066682" duration="1949000" />
+      <workItem from="1616594375389" duration="1807000" />
+      <workItem from="1616596193067" duration="1796000" />
+      <workItem from="1616598006803" duration="1803000" />
+      <workItem from="1616599827446" duration="1796000" />
+      <workItem from="1616601633129" duration="1743000" />
+      <workItem from="1616603490651" duration="2009000" />
+      <workItem from="1616614971298" duration="684000" />
+      <workItem from="1616703122086" duration="1251000" />
+      <workItem from="1616718417948" duration="1791000" />
+      <workItem from="1616720219377" duration="1744000" />
+      <workItem from="1616749622394" duration="1819000" />
+      <workItem from="1616751605793" duration="1799000" />
+      <workItem from="1616753416358" duration="1797000" />
+      <workItem from="1616755224435" duration="5191000" />
+      <workItem from="1616761083229" duration="1756000" />
+      <workItem from="1616767330593" duration="1384000" />
+      <workItem from="1616769138616" duration="1614000" />
+      <workItem from="1616854984931" duration="1789000" />
+      <workItem from="1616856783811" duration="711000" />
     </task>
     <servers />
   </component>

@@ -2,13 +2,14 @@
   margin: 0!important;
 }
 
-.temp1 {
+.marginTop {
   margin-top: 5%!important;
 }
 
-.temp2 {
-  margin-top: 2.5% !important;
+.marginTopL {
+  margin-top: 2.5%!important;
 }
+
 
 .bglight {
   background-color: #EaEaEa!important;
@@ -19,13 +20,13 @@
 }
 
 .apparition {
-  display: table-row;
-  visibility: visible;
   opacity: 1;
+  transition: opacity 0.5s linear;
+  display: table-row;
 }
 
 .hidden {
+  opacity: 0;
+  transition: opacity 0.5s linear;
   display: none;
-  visibility: hidden;
-  transition: visibility 0s, opacity 0.5s linear;
 }
