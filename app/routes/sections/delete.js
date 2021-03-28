@@ -21,11 +21,19 @@ export default class SectionsDeleteRoute extends Abstractroute {
   @action
   delete(bool) {
     if (bool) {
-      this.products.forEach(function(item) {
-        item.destroyRecord();
+      this.deleteProducts(this.products).then(() => {
+        this.section.destroyRecord();
+        this.transitionTo('sections');
       });
-      this.section.destroyRecord();
+    } else {
+      this.transitionTo('sections');
     }
-    this.transitionTo('sections');
+  }
+
+  async deleteProducts(products) {
+    while (products.firstObject) {
+      let p = products.firstObject;
+      await p.destroyRecord();
+    }
   }
 }

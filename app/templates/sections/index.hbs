@@ -24,9 +24,12 @@
     </div>
   </h1>
   <div class="ui segment">
-    <button {{action "AddSection"}} class="ui positive button ">Ajouter une nouvelle section</button>
-    <button {{action "AddProduct"}} class="ui positive button ">Ajouter un nouveau produit</button>
-    {{outlet "add"}}
+    <LinkTo @route="sections.add">
+      <button class="ui positive button ">Ajouter une nouvelle section</button>
+    </LinkTo>
+    <LinkTo @route="sections.addProduct" @model={{-1}}>
+      <button class="ui positive button ">Ajouter un nouveau produit</button>
+    </LinkTo>
     <div class="ui marginTopL">
       <div class="ui">
         <table class="ui very basic table ">
