@@ -1,2 +1,36 @@
 {{page-title "Add"}}
+<div class="ui basic inverted violet segment temp">
+  <div class="ui secondary menu">
+    <div class="ui right item">
+      <button {{action "logout"}} class="ui primary button ali">Déconnection</button>
+    </div>
+  </div>
+</div>
+<div class="ui basic inverted black segment temp">
+  <div class="ui secondary menu">
+    <div class="ui item">
+      <h1 class="ui grey inverted header">Sections</h1>
+    </div>
+    <div class="ui right item">
+      <button {{action "goBoard"}} class="ui positive button">Retour au board</button>
+    </div>
+  </div>
+</div>
+
+<div class="ui container segment bglight">
+  <h1 class="ui header">
+    <div class="content">Créer une nouvelle section</div>
+  </h1>
+  <div class="ui segment">
+    <div class="ui centered grid marginBotLL marginTopLL">
+      <p>Nom: <Input type="text" @value={{this.name}}/></p>
+      <p>Description: <Input type="text" @value={{this.description}}/></p>
+    </div>
+    <div class="ui centered grid marginBotLL">
+      <button class="ui positive button" {{action "ajouter"}}>Ajouter</button>
+      <button class="ui negative button" {{action "back"}}>Annuler</button>
+    </div>
+  </div>
+</div>
+
 {{outlet}}

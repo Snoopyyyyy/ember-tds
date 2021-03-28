@@ -25,9 +25,10 @@
     <button {{action "back"}} class="ui grey button right floated">Retour</button>
   </h1>
   <div class="ui segment">
-    <button {{action "AddProduct"}} class="ui positive button ">Ajouter un nouveau produit</button>
+    <LinkTo @route="sections.addProduct" @model={{@model.myId}}>
+      <button class="ui positive button ">Ajouter un nouveau produit</button>
+    </LinkTo>
     <button {{action "cancel"}} class="ui positive button right floated">Annuler</button>
-    <button {{action "save"}} class="ui negative button right floated ">Suprimer {{this.nb}}</button>
     <div class="ui marginTopL">
       <div class="ui">
         <table class="ui very basic table ">
@@ -35,7 +36,11 @@
             <tr class="{{if product.isDeleted 'negative' ''}} ">
               <td>{{product.name}}t</td>
               <td class="right aligned collapsing"><button class="ui secondary mini button">Modifier ...</button></td>
-              <td class="right aligned collapsing"><button {{action "delete" product}} class="ui icon red mini button">X</button></td>
+              <td class="right aligned collapsing">
+                <LinkTo @route="section.">
+                  <button class="ui icon red mini button">X</button>
+                </LinkTo>
+              </td>
             </tr>
           {{/each}}
         </table>

@@ -19,6 +19,11 @@ export default class SectionsDeleteRoute extends Abstractroute {
   }
 
   @action
+  back() {
+    this.transitionTo('sections');
+  }
+
+  @action
   delete(bool) {
     if (bool) {
       this.deleteProducts(this.products).then(() => {

@@ -17,14 +17,4 @@ export default class SectionsIndexRoute extends Abstractroute {
   goBoard() {
     this.transitionTo('board');
   }
-
-  @action
-  addSection() {
-    this.transitionTo('sections.add');
-  }
-
-  @action
-  AddProduct() {
-    this.transitionTo('sections.addProduct');
-  }
 }
