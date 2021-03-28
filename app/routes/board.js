@@ -5,16 +5,17 @@ export default class BoardRoute extends Abstractroute {
   employee;
   orders;
   model() {
-    this.redirect();
-    this.employee = this.userAuth.getUser();
-    return this.store
-      .query('order', {
-        filter: { idEmployee: this.employee.id },
-      })
-      .then((res) => {
-        this.orders = res;
-        return res;
-      });
+    if (this.userAuth.isAuth) {
+      this.employee = this.userAuth.getUser();
+      return this.store
+        .query('order', {
+          filter: { idEmployee: this.employee.id },
+        })
+        .then((res) => {
+          this.orders = res;
+          return res;
+        });
+    }
   }
 
   @action

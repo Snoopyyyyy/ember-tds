@@ -1,24 +1,22 @@
 import Abstractroute from '../Abstractroute';
 import { action } from '@ember/object';
-import { tracked } from '@glimmer/tracking';
 
 export default class SectionsAddRoute extends Abstractroute {
-  @tracked name;
-  @tracked description;
 
   model() {
-    this.redirect();
+    return { products: [] };
+  }
+
+  @action
+  ajouter(section) {
+    let post = this.store.createRecord('section', section);
+    post.save().then(() => {
+      this.back();
+    });
   }
 
   @action
   back() {
     this.transitionTo('sections');
-  }
-
-  @action
-  ajouter() {
-    if (this.name != null && this.description != null) {
-      this.back();
-    }
   }
 }

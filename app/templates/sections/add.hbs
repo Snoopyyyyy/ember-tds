@@ -22,14 +22,16 @@
     <div class="content">Créer une nouvelle section</div>
   </h1>
   <div class="ui segment">
-    <div class="ui centered grid marginBotLL marginTopLL">
-      <p>Nom: <Input type="text" @value={{this.name}}/></p>
-      <p>Description: <Input type="text" @value={{this.description}}/></p>
-    </div>
-    <div class="ui centered grid marginBotLL">
-      <button class="ui positive button" {{action "ajouter"}}>Ajouter</button>
-      <button class="ui negative button" {{action "back"}}>Annuler</button>
-    </div>
+    <form {{action "ajouter" @model on='submit'}} class="ui form">
+      <div class="ui centered grid marginBotLL marginTopLL">
+        <p>Nom: <Input type="text" required @value={{@model.name}}/></p>
+        <p>Description: <Textarea required @value={{@model.description}}/></p>
+      </div>
+      <div class="ui centered grid marginBotLL">
+        <button class="ui positive button" type="submit" >Ajouter</button>
+        <button class="ui negative button" {{action "back"}}>Annuler</button>
+      </div>
+    </form>
   </div>
 </div>
 

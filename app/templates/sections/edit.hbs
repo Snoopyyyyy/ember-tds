@@ -35,9 +35,13 @@
           {{#each @model.products as |product|}}
             <tr class="{{if product.isDeleted 'negative' ''}} ">
               <td>{{product.name}}t</td>
-              <td class="right aligned collapsing"><button class="ui secondary mini button">Modifier ...</button></td>
               <td class="right aligned collapsing">
-                <LinkTo @route="section.">
+                <LinkTo @route="sections.edit.edit" @models={{array @model.myId product.id}}>
+                  <button class="ui secondary mini button">Modifier ...</button>
+                </LinkTo>
+              </td>
+              <td class="right aligned collapsing">
+                <LinkTo @route="sections.edit">
                   <button class="ui icon red mini button">X</button>
                 </LinkTo>
               </td>

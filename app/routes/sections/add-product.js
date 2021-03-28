@@ -1,9 +1,8 @@
 import Abstractroute from '../Abstractroute';
+import { tracked } from "@glimmer/tracking";
 
 export default class SectionsAddProductRoute extends Abstractroute {
-  model() {
-    this.redirect();
-  }
+  @tracked name;
 
   renderTemplate() {
     this.render({ outlet: 'add' });

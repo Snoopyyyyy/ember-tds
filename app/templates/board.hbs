@@ -20,26 +20,30 @@
 <div class="ui container segment bglight">
   <h1>Commande</h1>
   <table class="ui celled table">
-    <tr class="center aligned">
-      <th>Client</th>
-      <th>Date de Commande</th>
-      <th>Statut</th>
-      <th>Nombre de colis</th>
-      <th>A payé</th>
-      <th>Quantité</th>
-      <th>Quantité manquant</th>
-    </tr>
+    <thead>
+      <tr>
+        <th>Client</th>
+        <th>Date de Commande</th>
+        <th>Statut</th>
+        <th class="center aligned">Nombre de colis</th>
+        <th class="center aligned">A payé</th>
+        <th class="center aligned">Quantité</th>
+        <th class="center aligned">Quantité manquant</th>
+      </tr>
+    </thead>
+    <tbody>
     {{#each @model as |val|}}
-      <tr class="center aligned">
+      <tr>
         <td>{{val.user.name}}</td>
         <td>{{moment-format val.dateCreation 'LLLL'}}</td>
         <td>{{val.status}}</td>
-        <td>{{val.amount}}</td>
-        <td>{{val.toPay}}</td>
-        <td>{{val.itemsNumber}}</td>
-        <td>{{val.missingNumber}}</td>
+        <td class="center aligned">{{val.amount}}</td>
+        <td class="center aligned">{{val.toPay}}</td>
+        <td class="center aligned">{{val.itemsNumber}}</td>
+        <td class="center aligned">{{val.missingNumber}}</td>
       </tr>
     {{/each}}
+    </tbody>
   </table>
 </div>
 

@@ -6,7 +6,6 @@ export default class SectionsEditRoute extends Abstractroute {
   products;
   model(params) {
     let resut = {};
-    this.redirect();
     this.myId = params.section_id;
     resut.name = this.store.peekRecord('section', this.myId).name;
     this.products = this.store.query('product', {

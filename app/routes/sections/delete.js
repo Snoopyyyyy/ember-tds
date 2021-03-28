@@ -2,20 +2,12 @@ import Abstractroute from '../Abstractroute';
 import { action } from '@ember/object';
 
 export default class SectionsDeleteRoute extends Abstractroute {
-  myId;
-  section;
-  products;
   model(params) {
-    this.redirect();
-    this.myId = params.section_id;
-    this.section = this.store.peekRecord('section', params.section_id);
-    this.products = this.store.query('product', {
-      filter: { idSection: params.section_id },
+    let controller = this.controllerFor(this.routeName);
+    controller.set('length', 0);
+    return this.store.findRecord('section', params.section_id, {
+      include: 'products',
     });
-    let result = {};
-    result.products = this.products;
-    result.section = this.section;
-    return result;
   }
 
   @action
@@ -24,21 +16,28 @@ export default class SectionsDeleteRoute extends Abstractroute {
   }
 
   @action
-  delete(bool) {
-    if (bool) {
-      this.deleteProducts(this.products).then(() => {
-        this.section.destroyRecord();
+  delete(model) {
+    let controller = this.controllerFor(this.routeName);
+    controller.set('length', 0);
+    controller.set('max', model.products.length);
+    this.deleteProducts(model.products, controller).then(() => {
+      model.destroyRecord().then(() => {
         this.transitionTo('sections');
       });
-    } else {
-      this.transitionTo('sections');
-    }
+    });
   }
 
-  async deleteProducts(products) {
+  @action
+  cancel() {
+    this.transitionTo('sections');
+  }
+
+  async deleteProducts(products, controller) {
+    let max = products.length;
     while (products.firstObject) {
       let p = products.firstObject;
       await p.destroyRecord();
+      controller.set('length', max - products.length);
     }
   }
 }

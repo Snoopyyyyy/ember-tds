@@ -21,12 +21,21 @@
   <h1 class="ui header">
     <div class="content">{{@model.section.name}}</div>
   </h1>
-  <div class="ui segment">
-    <h5 class="marginBotL">Voulez-vous vraiment supprimer cette section ainsi que ces {{@model.products.length}} produits ?</h5>
-      <div class="ui centered grid marginBotLL">
-        <button class="ui button negative" {{action "delete" true}}><i class="ui icon exclamation triangle"></i>Supprimer</button>
-        <button class="ui button positive" {{action "delete" false}}>Annuler</button>
+
+  <div class="ui icon error message">
+    <i class="exclamation triangle icon"></i>
+    <div class="content">
+      <div class="header">
+        Suppression de la section {{@model.section.name}}
       </div>
+      <p>Voulez-vous vraiment supprimer cette section ainsi que ses {{@model.products.length}} produits ?</p>
+      <UiProgress class="indicating" @value="{{this.length}}" @progress="{{this.length}}" @total="{{this.max}}" >
+        <div class="bar"></div>
+      </UiProgress>
+      <div class="ui divider"></div>
+      <button class="ui button negative" {{action "delete" @model}}>Supprimer</button>
+      <button class="ui button positive" {{action "cancel"}}>Annuler</button>
+    </div>
   </div>
 </div>
 {{outlet}}
