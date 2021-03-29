@@ -23,9 +23,14 @@
   </h1>
   <div class="ui segment">
     <form {{action "ajouter" @model on='submit'}} class="ui form">
-      <div class="ui five column centered grid">
-        <div class="ui centered grid marginBotLL marginTopLL">
-          <UiDropdown class="selection" @selected={{@model.product.section}} @onChange={{fn (mut @model.product.section)}} as |execute mapper|>
+      <div class="ui centered two column grid">
+        <div class="ui one column wide marginBotLL marginTopLL">
+          <Input class="ui input marginBotLL" type="text" placeholder="Nom du product" required @value={{@model.product.name}}/>
+          <Input class="ui input marginBotLL" type="number" placeholder="Nombre en stock" required @value={{@model.product.stock}}/>
+          <Input class="ui input marginBotLL" type="number" step="any" placeholder="Prix du product" required @value={{@model.product.price}}/>
+          <Input class="ui input marginBotLL" type="number" step="any" placeholder="Promotion sur le product" required @value={{@model.product.promotion}}/>
+          <Textarea class="ui input marginBotLL" rows="1" placeholder="Description du product" required @value={{@model.product.comments}}/>
+          <UiDropdown class="ui input marginBotLL fluid selection" @selected={{@model.product.section}} @onChange={{fn (mut @model.product.section)}} as |execute mapper|>
             <div class="default text">Section</div>
             <i class="dropdown icon"></i>
             <div class="menu">
@@ -36,11 +41,6 @@
               {{/each}}
             </div>
           </UiDropdown>
-          <Input class="ui input marginBotLL" type="text" placeholder="Nom du product" required @value={{@model.product.name}}/>
-          <Input class="ui input marginBotLL" type="number" placeholder="Nombre en stock" required @value={{@model.product.stock}}/>
-          <Input class="ui input marginBotLL" type="number" step="any" placeholder="Prix du product" required @value={{@model.product.price}}/>
-          <Input class="ui input marginBotLL" type="number" step="any" placeholder="Promotion sur le product" required @value={{@model.product.promotion}}/>
-          <Textarea class="ui input marginBotLL" rows="1" placeholder="Description du product" required @value={{@model.product.comments}}/>
         </div>
       </div>
       <div class="ui centered grid marginBotLL">

@@ -3,12 +3,16 @@ import { action } from '@ember/object';
 
 export default class SectionsEditEditRoute extends Route {
   model(params) {
-    params.section_id;
-    params.product_id;
+    return this.store.findRecord('product', params.product_id);
   }
 
-  @action
-  goBoard() {
-    this.transitionTo('board');
+  @action back(model) {
+    this.transitionTo('sections.edit', model.section.get('id'));
+  }
+
+  @action update(model) {
+    model.save().then(() => {
+      this.transitionTo('sections.edit', model.section.get('id'));
+    });
   }
 }

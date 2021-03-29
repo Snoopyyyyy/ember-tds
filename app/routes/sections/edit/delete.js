@@ -18,7 +18,7 @@ export default class SectionsEditDeleteRoute extends Route {
 
   @action
   delete(model) {
-    model.save().then(() => {
+    model.destroyRecord().then(() => {
       this.transitionTo('sections.edit');
     });
   }

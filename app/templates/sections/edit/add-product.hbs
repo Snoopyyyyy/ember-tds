@@ -1,17 +1,17 @@
 {{page-title "AddProduct"}}
 <div class="ui container segment bglight">
   <h1 class="ui header">
-    <div class="content">Créer une nouvelle section</div>
+    <div class="content">Ajouter un nouveau produit</div>
   </h1>
   <div class="ui segment">
     <form {{action "ajouter" @model on='submit'}} class="ui form">
-      <div class="ui five column centered grid">
-        <div class="ui centered grid marginBotLL marginTopLL">
+      <div class="ui centered two column grid">
+        <div class="ui one column wide marginBotLL marginTopLL">
           <Input class="ui input marginBotLL" type="text" placeholder="Nom du product" required @value={{@model.product.name}}/>
-          <Input class="ui input marginBotLL" type="number" placeholder="Nombre en stock" required @value={{@model.product.stock}}/>
+          <Input class="ui input marginBotLL" type="number" placeholder="Nombre en stock" @value={{@model.product.stock}}/>
           <Input class="ui input marginBotLL" type="number" step="any" placeholder="Prix du product" required @value={{@model.product.price}}/>
-          <Input class="ui input marginBotLL" type="number" step="any" placeholder="Promotion sur le product" required @value={{@model.product.promotion}}/>
-          <Textarea class="ui input marginBotLL" rows="1" placeholder="Description du product" required @value={{@model.product.comments}}/>
+          <Input class="ui input marginBotLL" type="number" step="any" placeholder="Promotion sur le product" @value={{@model.product.promotion}}/>
+          <Textarea class="ui input marginBotLL" rows="1" placeholder="Description du product" @value={{@model.product.comments}}/>
         </div>
       </div>
       <div class="ui centered grid marginBotLL">
