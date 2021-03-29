@@ -7,6 +7,7 @@ export default class SectionsEditEditRoute extends Route {
   }
 
   @action back(model) {
+    model.rollbackAttributes();
     this.transitionTo('sections.edit', model.section.get('id'));
   }
 

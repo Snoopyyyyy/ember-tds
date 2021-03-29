@@ -1,45 +1,45 @@
 import Abstractroute from '../Abstractroute';
-import { action } from '@ember/object';
+import { action, set } from '@ember/object';
+import RSVP from 'rsvp';
 
 export default class SectionsEditRoute extends Abstractroute {
   model(params) {
-    return this.store.findRecord('section', params.section_id, {
-      include: 'products',
+    return RSVP.hash({
+      section: this.store.findRecord('section', params.section_id, {
+        include: 'products',
+      }),
+      isEdit: false,
     });
   }
 
   @action
-  back() {
+  cancel(model) {
+    set(model, 'isEdit', false);
+    model.section.rollbackAttributes();
+    this.transitionTo('sections.edit', model.section.get('id'));
+    this.refresh();
+  }
+
+  @action back() {
     this.transitionTo('sections');
-  }
-
-  @action
-  delete(product) {
-    if (!product.get('isDeleted')) {
-      product.deleteRecord();
-    } else {
-      product.rollbackAttributes();
-    }
-  }
-
-  @action
-  save() {
-    this.products.forEach(function (item) {
-      item.save();
-    });
-  }
-
-  @action
-  cancel() {
-    this.products.forEach(function (item) {
-      if (item.get('isDeleted')) {
-        item.rollbackAttributes();
-      }
-    });
   }
 
   @action
   goBoard() {
     this.transitionTo('board');
+  }
+
+  @action
+  editing(model) {
+    set(model, 'isEdit', !model.isEdit);
+  }
+
+  @action
+  update(model) {
+    model.section.save().then(() => {
+      set(model, 'isEdit', false);
+      this.transitionTo('sections.edit', model.section.get('id'));
+      this.refresh();
+    });
   }
 }

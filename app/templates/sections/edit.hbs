@@ -18,31 +18,53 @@
 </div>
 
 {{outlet}}
+{{#if @model.isEdit}}
+  <div class="ui container segment bglight">
+    <h1 class="ui header">
+      <div class="content">Modifier les données de la section {{@model.section.name}}</div>
+    </h1>
+    <div class="ui segment">
+      <form {{action "update" @model on='submit'}} class="ui form">
+        <div class="ui five column centered grid">
+          <div class="ui centered grid marginBotLL marginTopLL">
+            <Input class="ui input marginBotLL" type="text" placeholder="Nom de la section" required @value={{@model.section.name}}/>
+            <Textarea class="ui input marginBotLL" rows="1" placeholder="Description de la section" required @value={{@model.section.description}}/>
+          </div>
+        </div>
+        <div class="ui centered grid marginBotLL">
+          <button class="ui positive button" type="submit" >Mettre a jourgit</button>
+          <button class="ui negative button" {{action "cancel" @model}}>Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{{/if}}
 
 <div class="ui container segment bglight">
   <h1 class="ui header">
     <div class="content">
-      Section {{@model.name}}
+      Section {{@model.section.name}}
     </div>
-    <button {{action "back"}} class="ui grey button right floated">Retour</button>
+    <button {{action "back" @model}} class="ui grey button right floated">Retour</button>
+    <button {{action "editing" @model}} class="ui primary button right floated"><i class="ui icon edit"></i>Modification</button>
   </h1>
   <div class="ui segment">
-    <LinkTo @route="sections.edit.addProduct" @model={{@model.id}}>
+    <LinkTo @route="sections.edit.addProduct" @model={{@model.section.id}}>
       <button class="ui positive button ">Ajouter un nouveau produit</button>
     </LinkTo>
     <div class="ui marginTopL">
       <div class="ui">
         <table class="ui very basic table ">
-          {{#each @model.products as |product|}}
+          {{#each @model.section.products as |product|}}
             <tr class="{{if product.isDeleted 'negative' ''}} ">
               <td>{{product.name}}</td>
               <td class="right aligned collapsing">
-                <LinkTo @route="sections.edit.edit" @models={{array @model.id product.id}}>
+                <LinkTo @route="sections.edit.edit" @models={{array @model.section.id product.id}}>
                   <button class="ui secondary mini button">Modifier ...</button>
                 </LinkTo>
               </td>
               <td class="right aligned collapsing">
-                <LinkTo @route="sections.edit.delete" @models={{array @model.id product.id}}>
+                <LinkTo @route="sections.edit.delete" @models={{array @model.section.id product.id}}>
                   <button class="ui icon red mini button">X</button>
                 </LinkTo>
               </td>
