@@ -23,9 +23,11 @@
   </h1>
   <div class="ui segment">
     <form {{action "ajouter" @model on='submit'}} class="ui form">
-      <div class="ui centered grid marginBotLL marginTopLL">
-        <p>Nom: <Input type="text" required @value={{@model.name}}/></p>
-        <p>Description: <Textarea required @value={{@model.description}}/></p>
+      <div class="ui five column centered grid">
+        <div class="ui centered grid marginBotLL marginTopLL">
+          <Input class="ui input marginBotLL" type="text" placeholder="Nom de la section" required @value={{@model.name}}/>
+          <Textarea class="ui input marginBotLL" rows="1" placeholder="Description de la section" required @value={{@model.description}}/>
+        </div>
       </div>
       <div class="ui centered grid marginBotLL">
         <button class="ui positive button" type="submit" >Ajouter</button>
