@@ -17,6 +17,8 @@
   </div>
 </div>
 
+{{outlet}}
+
 <div class="ui container segment bglight">
   <h1 class="ui header">
     <div class="content">
@@ -25,23 +27,22 @@
     <button {{action "back"}} class="ui grey button right floated">Retour</button>
   </h1>
   <div class="ui segment">
-    <LinkTo @route="sections.addProduct" @model={{@model.myId}}>
+    <LinkTo @route="sections.edit.addProduct" @model={{@model.id}}>
       <button class="ui positive button ">Ajouter un nouveau produit</button>
     </LinkTo>
-    <button {{action "cancel"}} class="ui positive button right floated">Annuler</button>
     <div class="ui marginTopL">
       <div class="ui">
         <table class="ui very basic table ">
           {{#each @model.products as |product|}}
             <tr class="{{if product.isDeleted 'negative' ''}} ">
-              <td>{{product.name}}t</td>
+              <td>{{product.name}}</td>
               <td class="right aligned collapsing">
-                <LinkTo @route="sections.edit.edit" @models={{array @model.myId product.id}}>
+                <LinkTo @route="sections.edit.edit" @models={{array @model.id product.id}}>
                   <button class="ui secondary mini button">Modifier ...</button>
                 </LinkTo>
               </td>
               <td class="right aligned collapsing">
-                <LinkTo @route="sections.edit">
+                <LinkTo @route="sections.edit.delete" @models={{array @model.id product.id}}>
                   <button class="ui icon red mini button">X</button>
                 </LinkTo>
               </td>
@@ -52,4 +53,3 @@
     </div>
   </div>
 </div>
-{{outlet}}

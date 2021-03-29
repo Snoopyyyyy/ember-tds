@@ -1,0 +1,20 @@
+{{page-title "Delete"}}
+<div class="ui container segment bglight">
+  <h1 class="ui header">
+    <div class="content">Suppression</div>
+  </h1>
+
+  <div class="ui icon error message">
+    <i class="exclamation triangle icon"></i>
+    <div class="content">
+      <div class="header">
+        Suppression le produit {{@model.name}}
+      </div>
+      <p>Voulez-vous vraiment supprimer le produit {{@model.name}} ?</p>
+      <div class="ui divider"></div>
+      <button class="ui button negative" {{action "delete" @model}}>Supprimer</button>
+      <button class="ui button positive" {{action "cancel"}}>Annuler</button>
+    </div>
+  </div>
+</div>
+{{outlet}}

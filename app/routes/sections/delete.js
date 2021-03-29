@@ -40,4 +40,9 @@ export default class SectionsDeleteRoute extends Abstractroute {
       controller.set('length', max - products.length);
     }
   }
+
+  @action
+  goBoard() {
+    this.transitionTo('board');
+  }
 }

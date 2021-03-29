@@ -1,10 +1,31 @@
 import Abstractroute from '../Abstractroute';
-import { tracked } from "@glimmer/tracking";
+import { action } from '@ember/object';
+import RSVP from 'rsvp';
 
 export default class SectionsAddProductRoute extends Abstractroute {
-  @tracked name;
+  model() {
+    return RSVP.hash({
+      product: {},
+      sections: this.store.findAll('section'),
+    });
+  }
 
-  renderTemplate() {
-    this.render({ outlet: 'add' });
+  @action
+  back() {
+    this.transitionTo('sections');
+  }
+
+  @action
+  ajouter(model) {
+    let post = this.store.createRecord('product', model.product);
+    console.log(model.product.section.name);
+    post.save().then(() => {
+      this.back();
+    });
+  }
+
+  @action
+  goBoard() {
+    this.transitionTo('board');
   }
 }

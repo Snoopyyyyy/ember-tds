@@ -2,7 +2,6 @@ import Abstractroute from '../Abstractroute';
 import { action } from '@ember/object';
 
 export default class SectionsAddRoute extends Abstractroute {
-
   model() {
     return { products: [] };
   }
@@ -18,5 +17,10 @@ export default class SectionsAddRoute extends Abstractroute {
   @action
   back() {
     this.transitionTo('sections');
+  }
+
+  @action
+  goBoard() {
+    this.transitionTo('board');
   }
 }

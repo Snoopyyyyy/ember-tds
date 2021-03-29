@@ -2,18 +2,10 @@ import Abstractroute from '../Abstractroute';
 import { action } from '@ember/object';
 
 export default class SectionsEditRoute extends Abstractroute {
-  myId;
-  products;
   model(params) {
-    let resut = {};
-    this.myId = params.section_id;
-    resut.name = this.store.peekRecord('section', this.myId).name;
-    this.products = this.store.query('product', {
-      filter: { idSection: params.section_id },
+    return this.store.findRecord('section', params.section_id, {
+      include: 'products',
     });
-    resut.products = this.products;
-    resut.myId = params.section_id;
-    return resut;
   }
 
   @action
@@ -44,5 +36,10 @@ export default class SectionsEditRoute extends Abstractroute {
         item.rollbackAttributes();
       }
     });
+  }
+
+  @action
+  goBoard() {
+    this.transitionTo('board');
   }
 }
