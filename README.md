@@ -22,3 +22,7 @@ Pour réaliser ce projet, nous avons utiliser les outils suivant:
 
 ## III. Aspect du stie
 ![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/loggin.PNG)
+![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/loggin.PNG)
+![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/loggin.PNG)
+![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/loggin.PNG)
+![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/loggin.PNG)
