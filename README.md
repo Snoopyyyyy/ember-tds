@@ -22,9 +22,19 @@ Pour réaliser ce projet, nous avons utiliser les outils suivant:
 
 ## III. Aspect du stie
 * La page __index__ pour la connecxion pour les employés  
+
+
 ![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/loggin.PNG)
-* La page __board__ pour voir les commandes restante a préparer par l'employé
+
+
+* La page __board__ pour voir les commandes restante a préparer par l'employé  
+
+
 ![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/board.PNG)
+
+
 * La page __setions__ pour voir la liste des sections du store, ainsi qu'un petit onglet  
 déroulant pour voir ces produit  
+
+
 ![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/sections.PNG)
