@@ -19,14 +19,14 @@
 
 <div class="ui container segment bglight">
   <h1 class="ui header">
-    <div class="content">{{@model.section.name}}</div>
+    <div class="content">{{@model.name}}</div>
   </h1>
 
   <div class="ui icon error message">
     <i class="exclamation triangle icon"></i>
     <div class="content">
       <div class="header">
-        Suppression de la section {{@model.section.name}}
+        Suppression de la section {{@model.name}}
       </div>
       <p>Voulez-vous vraiment supprimer cette section ainsi que ses {{@model.products.length}} produits ?</p>
       <UiProgress class="indicating" @value="{{this.length}}" @progress="{{this.length}}" @total="{{this.max}}" >

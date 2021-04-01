@@ -11,6 +11,14 @@ voir leur commande à préparer restante.
 
 ## II. Outils utilisé
 Pour réaliser ce projet, nous avons utiliser les outils suivant:  
-* le cadriciel [Ember JS](https://emberjs.com/)  
-* Ansin qu'une basse de donée [XAMPP](https://www.apachefriends.org/fr/index.html)  
-* nous avons aussi utiliser d'autre outils comme [composseur](https://getcomposer.org/)
+* Le cadriciel [Ember JS](https://emberjs.com/)  
+* Une basse de donée [XAMPP](https://www.apachefriends.org/fr/index.html)  
+* Le gestionnaire de dépendances PHP [composseur](https://getcomposer.org/)
+* [Semantic ui](https://semantic-ui.com/) pour le style graphique de mon application
+
+
+-------------
+
+
+## III. Aspect du stie
+![page de connection]()

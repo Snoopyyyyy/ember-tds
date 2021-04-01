@@ -1,14 +1,14 @@
 {{page-title "Index"}}
-<div class="ui five column centered grid">
-  <div class="two column wide">
-    <div class="ui container segment centerzed">
-      <h1>Connexion</h1>
-      <form class="ui form centered aligned">
-        <Input class="ui input" @value={{email}}/><br>
-        <Input class="ui input" type="password" @value={{password}}/><br>
-        <button class="ui primary fluid button"{{action "login" email password}}>Connection</button>
-      </form>
+  <div class="ui five column centered grid vertical-center">
+    <div class="two column wide">
+      <div class="ui container segment centerzed">
+        <h1 align="center">Connexion</h1>
+        <form class="ui form centered aligned">
+          <Input class="ui marginBotL input" @value={{email}}/><br>
+          <Input class="ui marginBotL input" type="password" @value={{password}}/><br>
+          <button class="ui primary fluid button marginBotL"{{action "login" email password}}>Connection</button>
+        </form>
+      </div>
     </div>
   </div>
-</div>
 {{outlet}}

@@ -25,8 +25,8 @@
     </h1>
     <div class="ui segment">
       <form {{action "update" @model on='submit'}} class="ui form">
-        <div class="ui five column centered grid">
-          <div class="ui centered grid marginBotLL marginTopLL">
+        <div class="ui two column centered grid">
+          <div class="ui centered one column wide marginBotLL marginTopLL">
             <Input class="ui input marginBotLL" type="text" placeholder="Nom de la section" required @value={{@model.section.name}}/>
             <Textarea class="ui input marginBotLL" rows="1" placeholder="Description de la section" required @value={{@model.section.description}}/>
           </div>

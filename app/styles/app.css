@@ -23,7 +23,7 @@
 
 
 .bglight {
-  background-color: #EaEaEa!important;
+  background-color: #999999!important;
 }
 
 .clickable {
@@ -42,6 +42,10 @@
   display: none;
 }
 
-.centerzed {
+.vertical-center {
+  margin-top: 15%!important;
+}
 
+body {
+  background-color: #444444!important;
 }
