@@ -38,3 +38,23 @@ déroulant pour voir ces produit
 
 
 ![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/sections.PNG)
+
+
+* La page __setions/edit__ pour voir les détails de la section, ainsi que la possibilité de modifier  
+la section petit onglet déroulant pour voir ces produit *(nom , description)*
+
+
+![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/sections_edit.PNG)
+
+
+* La page __setions/add__ pour pouvoir ajouter une nouvelle section  
+
+
+![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/sections_add.PNG)
+
+
+* La page __setions/addProduct__ pour pouvoir ajouter un nouveau produit dans une  
+section défini par l'employé via le menu deroulant  
+
+
+![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/sections_addProduct.PNG)
