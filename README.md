@@ -58,3 +58,9 @@ section défini par l'employé via le menu deroulant
 
 
 ![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/sections_addProduct.PNG)
+
+
+* La page __setions/delete__ pour pouvoir supprimer la section ainsi que tous ses produits  
+
+
+![page de connection](https://github.com/Snoopyyyyy/ember-tds/blob/eval/img/sections_delete.PNG)
