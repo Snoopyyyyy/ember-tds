@@ -1,2 +1,16 @@
 {{page-title "Cancel"}}
+<div class="ui container segment bglight">
+  <div class="ui icon error message">
+    <i class="exclamation triangle icon"></i>
+    <div class="content">
+      <div class="header">
+        Suppression de la commande N°{{@model.id}}
+      </div>
+      <p>Voulez-vous vraiment supprimer la commande ainsi que ses {{@model.orderdetails.length}} produits commander ?</p>
+      <div class="ui divider"></div>
+      <button class="ui button negative" {{action "delete" @model}}>Supprimer</button>
+      <button class="ui button positive" {{action "cancel" @model}}>Annuler</button>
+    </div>
+  </div>
+</div>
 {{outlet}}

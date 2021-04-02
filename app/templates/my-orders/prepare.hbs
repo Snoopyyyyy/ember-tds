@@ -17,7 +17,8 @@
   </div>
 </div>
 
-<div class="ui container marginTopL segment bglight">
+{{outlet}}
+<div class="ui container segment bglight">
   <h1 class="ui header">
     <div class="content">Détail de la commande N°{{@model.id}}</div>
     <button class="ui grey button right floated" {{action "back"}}>retour</button>
@@ -55,7 +56,11 @@
               <td class="collapsing"><span class="bold">Nom: </span>{{orderdetail.product.name}}</td>
               <td><span class="bold">Prix: </span>{{orderdetail.product.price}}</td>
               <td class="collapsing"><span class="bold">Quantité: </span>{{orderdetail.quantity}}</td>
-              <td class="collapsing"><button {{action "toggle" @model orderdetail}}>préparer</button></td>
+              <td class="collapsing">
+                <!--<UiCheckbox class="toggle" label="Préparé" @checked={{orderdetail.prepared}} @onChange={{fn this.switch orderdetail}}/>-->
+                <Input class="toggle" @type="checkbox" @checked={{orderdetail.prepared}} {{action "toggle" orderdetail on="change"}}/>
+                <span class="bold"> Préparé</span>
+              </td>
             </tr>
             {{/each}}
         {{/each}}
@@ -64,12 +69,15 @@
   </div>
 
   <div class="ui segment">
-    <h2>Avencement</h2>
-    <div class="ui segment">
-      <UiProgress class="indicating" @value="{{this.length}}" @progress="{{this.length}}" @total="{{this.max}}" >
-        <div class="bar"></div>
-      </UiProgress>
-    </div>
+    <h2>Avancement</h2>
+    <UiProgress class="indicating" @value="{{this.length}}" @progress="{{this.length}}" @total="{{this.max}}" >
+      <div class="bar"></div>
+    </UiProgress>
+    <LinkTo @route="myOrders.prepare.cancel" @model={{@model.id}}>
+      <button class="ui negative button ">Annuler la commande</button>
+    </LinkTo>
+    <LinkTo @route="myOrders.prepare.prepared" @model={{@model.id}}>
+      <button class="ui positive button right floated ">Commande préparer</button>
+    </LinkTo>
   </div>
 </div>
-{{outlet}}

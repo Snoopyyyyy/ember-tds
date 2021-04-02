@@ -7,12 +7,13 @@
     <list default="true" id="acd9ce3f-8218-4391-974f-60398f86198b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/my-orders/prepare.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/my-orders/prepare.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/orderdetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/orderdetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/my-orders/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/my-orders/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/my-orders/prepare.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/my-orders/prepare.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/my-orders/prepare/cancel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/my-orders/prepare/cancel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/my-orders/prepare/prepared.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/my-orders/prepare/prepared.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/my-orders/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/my-orders/index.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/my-orders/prepare.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/my-orders/prepare.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/sections/edit.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/edit.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/my-orders/prepare/cancel.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/my-orders/prepare/cancel.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/my-orders/prepare/prepared.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/my-orders/prepare/prepared.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +154,11 @@
       <workItem from="1617367558915" duration="1373000" />
       <workItem from="1617369925786" duration="1772000" />
       <workItem from="1617371734489" duration="1833000" />
-      <workItem from="1617373679010" duration="808000" />
+      <workItem from="1617373679010" duration="1619000" />
+      <workItem from="1617375776632" duration="1798000" />
+      <workItem from="1617377583500" duration="1801000" />
+      <workItem from="1617379462389" duration="1796000" />
+      <workItem from="1617381269289" duration="1516000" />
     </task>
     <servers />
   </component>

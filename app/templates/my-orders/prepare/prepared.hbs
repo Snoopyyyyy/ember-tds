@@ -1,2 +1,16 @@
 {{page-title "Prepared"}}
+<div class="ui container segment bglight">
+  <div class="ui icon positive message">
+    <i class="question circle outline icon"></i>
+    <div class="content">
+      <div class="header">
+        Valider la commande N°{{@model.id}}
+      </div>
+      <p>Voulez-vous vraiment valider la commande comme préparé ?</p>
+      <div class="ui divider"></div>
+      <button class="ui button positive" {{action "valider" @model}}>Supprimer</button>
+      <button class="ui button negative" {{action "cancel" @model}}>Annuler</button>
+    </div>
+  </div>
+</div>
 {{outlet}}

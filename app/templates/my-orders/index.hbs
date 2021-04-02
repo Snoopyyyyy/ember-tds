@@ -25,7 +25,6 @@
       <th>Client</th>
       <th>Date de Commande</th>
       <th>Statut</th>
-      <th class="center aligned">Nombre de colis</th>
       <th class="center aligned">A payé</th>
       <th class="center aligned">Quantité</th>
       <th class="center aligned">Quantité manquant</th>
@@ -37,7 +36,6 @@
         <td>{{order.user.name}}</td>
         <td>{{moment-format order.dateCreation 'LLLL'}}</td>
         <td>{{order.status}}</td>
-        <td class="center aligned">{{order.amount}}</td>
         <td class="center aligned">{{order.toPay}}</td>
         <td class="center aligned">{{order.itemsNumber}}</td>
         <td class="center aligned">{{order.missingNumber}}</td>
