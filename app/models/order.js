@@ -10,5 +10,9 @@ export default class OrderModel extends Model {
   @attr('number') itemsNumber;
   @attr('number') missingNumber;
   @belongsTo('timeslot') timeslot;
-  @hasMany('orderdetail') orderdetail;
+  @hasMany('orderdetail') orderdetails;
+
+  get Count() {
+    return this.orderdetails.length;
+  }
 }

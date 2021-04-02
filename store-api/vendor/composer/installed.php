@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'cd723b106c14073dc6f25a3511a8ba386890db7e',
+    'reference' => '944bed25cbeb2be761cb5cbf16c82b851292f523',
     'name' => 'phpmv/ubiquity-project',
   ),
   'versions' => 
@@ -22,12 +22,12 @@
     ),
     'phpmv/php-mv-ui' => 
     array (
-      'pretty_version' => '2.3.20',
-      'version' => '2.3.20.0',
+      'pretty_version' => '2.3.21',
+      'version' => '2.3.21.0',
       'aliases' => 
       array (
       ),
-      'reference' => '47de24027643865b4b567fe4ed67429748d63713',
+      'reference' => 'd4bd11beeab50e45a591e613911ea317ae841db4',
     ),
     'phpmv/ubiquity' => 
     array (
@@ -37,7 +37,7 @@
       array (
         0 => '2.4.x-dev',
       ),
-      'reference' => 'a169616c2706a43c10a7414769c59cc66c5beff4',
+      'reference' => 'c263d6742b4b10bbbbc6695cefde301dc5548682',
     ),
     'phpmv/ubiquity-attributes' => 
     array (
@@ -91,16 +91,16 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'cd723b106c14073dc6f25a3511a8ba386890db7e',
+      'reference' => '944bed25cbeb2be761cb5cbf16c82b851292f523',
     ),
     'phpmv/ubiquity-webtools' => 
     array (
-      'pretty_version' => '2.4.6',
-      'version' => '2.4.6.0',
+      'pretty_version' => '2.4.7',
+      'version' => '2.4.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '33d22a071cc2d2b4d47e99cf4be6e71aad5d4a45',
+      'reference' => '0b56462d0b3cc369c6540e18f00233c610972cdc',
     ),
     'symfony/polyfill-ctype' => 
     array (

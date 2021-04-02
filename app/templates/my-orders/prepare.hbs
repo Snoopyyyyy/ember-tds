@@ -19,15 +19,23 @@
 
 <div class="ui container marginTopL segment bglight">
   <h1 class="ui header">
-    <div class="content">Détail de la commande N°{{@model.order.id}}<br></div>
+    <div class="content">Détail de la commande N°{{@model.id}}<br></div>
     <div class="ui segment">
       <h2>Client</h2>
-      <p class="info-client">Nom: {{@model.client.name}}</p>
-      <p class="info-client">Email: {{@model.client.email}}</p>
+      <p class="info-client">Nom: {{@model.user.name}}</p>
+      <p class="info-client">Email: {{@model.user.email}}</p>
     </div>
   </h1>
   <div class="ui segment">
-
+    {{#each this.sections as |section|}}
+      <li>{{section.value}}
+        <ul>
+          {{#each section.items as |orderdetail|}}
+            <li>{{orderdetail.product.name}}</li>
+          {{/each}}
+        </ul>
+      </li>
+    {{/each}}
   </div>
 </div>
 {{outlet}}

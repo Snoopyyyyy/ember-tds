@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/ubiquity.git",
-                "reference": "a169616c2706a43c10a7414769c59cc66c5beff4"
+                "reference": "c263d6742b4b10bbbbc6695cefde301dc5548682"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/ubiquity/zipball/a169616c2706a43c10a7414769c59cc66c5beff4",
-                "reference": "a169616c2706a43c10a7414769c59cc66c5beff4",
+                "url": "https://api.github.com/repos/phpMv/ubiquity/zipball/c263d6742b4b10bbbbc6695cefde301dc5548682",
+                "reference": "c263d6742b4b10bbbbc6695cefde301dc5548682",
                 "shasum": ""
             },
             "require": {
@@ -63,7 +63,7 @@
                 "issues": "https://github.com/phpMv/ubiquity/issues",
                 "source": "https://github.com/phpMv/ubiquity/tree/master"
             },
-            "time": "2021-03-25T01:52:27+00:00"
+            "time": "2021-04-02T00:52:07+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -334,16 +334,16 @@
         },
         {
             "name": "phpmv/php-mv-ui",
-            "version": "2.3.20",
+            "version": "2.3.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/phpMv-UI.git",
-                "reference": "47de24027643865b4b567fe4ed67429748d63713"
+                "reference": "d4bd11beeab50e45a591e613911ea317ae841db4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/phpMv-UI/zipball/47de24027643865b4b567fe4ed67429748d63713",
-                "reference": "47de24027643865b4b567fe4ed67429748d63713",
+                "url": "https://api.github.com/repos/phpMv/phpMv-UI/zipball/d4bd11beeab50e45a591e613911ea317ae841db4",
+                "reference": "d4bd11beeab50e45a591e613911ea317ae841db4",
                 "shasum": ""
             },
             "require": {
@@ -394,9 +394,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpMv/phpMv-UI/issues",
-                "source": "https://github.com/phpMv/phpMv-UI/tree/2.3.20"
+                "source": "https://github.com/phpMv/phpMv-UI/tree/2.3.21"
             },
-            "time": "2021-03-06T01:42:43+00:00"
+            "time": "2021-03-14T00:54:36+00:00"
         },
         {
             "name": "phpmv/ubiquity-attributes",
@@ -675,16 +675,16 @@
         },
         {
             "name": "phpmv/ubiquity-webtools",
-            "version": "2.4.6",
+            "version": "2.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/ubiquity-webtools.git",
-                "reference": "33d22a071cc2d2b4d47e99cf4be6e71aad5d4a45"
+                "reference": "0b56462d0b3cc369c6540e18f00233c610972cdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/ubiquity-webtools/zipball/33d22a071cc2d2b4d47e99cf4be6e71aad5d4a45",
-                "reference": "33d22a071cc2d2b4d47e99cf4be6e71aad5d4a45",
+                "url": "https://api.github.com/repos/phpMv/ubiquity-webtools/zipball/0b56462d0b3cc369c6540e18f00233c610972cdc",
+                "reference": "0b56462d0b3cc369c6540e18f00233c610972cdc",
                 "shasum": ""
             },
             "require": {
@@ -725,9 +725,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpMv/ubiquity-webtools/issues",
-                "source": "https://github.com/phpMv/ubiquity-webtools/tree/2.4.6"
+                "source": "https://github.com/phpMv/ubiquity-webtools/tree/2.4.7"
             },
-            "time": "2021-03-07T11:59:53+00:00"
+            "time": "2021-03-28T21:19:16+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
