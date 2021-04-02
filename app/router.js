@@ -20,4 +20,7 @@ Router.map(function () {
 
   this.route('section', function() {});
   this.route('board');
+  this.route('myOrders', function() {
+    this.route('prepare', { path: '/myOrders/:order_id' });
+  });
 });
