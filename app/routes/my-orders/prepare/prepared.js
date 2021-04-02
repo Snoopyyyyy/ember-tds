@@ -1,7 +1,7 @@
-import Route from '@ember/routing/route';
 import { action } from '@ember/object';
+import Abstractroute from '../../Abstractroute';
 
-export default class MyOrdersPreparePreparedRoute extends Route {
+export default class MyOrdersPreparePreparedRoute extends Abstractroute {
   @action
   valider(order) {
     order.set('status', 'prepared');

@@ -61,7 +61,6 @@
               <td><span class="bold">Prix: </span>{{orderdetail.product.price}}</td>
               <td class="collapsing"><span class="bold">Quantité: </span>{{orderdetail.quantity}}</td>
               <td class="collapsing">
-                <!--<UiCheckbox class="toggle" label="Préparé" @checked={{orderdetail.prepared}} @onChange={{fn this.switch orderdetail}}/>-->
                 <Input class="toggle" @type="checkbox" @checked={{orderdetail.prepared}} {{action "toggle" orderdetail on="change"}}/>
                 <span class="bold"> Préparé</span>
               </td>
