@@ -1,2 +1,33 @@
 {{page-title "Prepare"}}
+<div class="ui basic inverted violet segment temp">
+  <div class="ui secondary menu">
+    <div class="ui right item">
+      <button {{action "logout"}} class="ui primary button ali">Déconnection</button>
+    </div>
+  </div>
+</div>
+<div class="ui basic inverted black segment temp">
+  <div class="ui secondary menu">
+    <div class="ui item">
+      <h1 class="ui grey inverted header">Sections</h1>
+    </div>
+    <div class="ui right item">
+      <button {{action "goBoard"}} class="ui positive button ">Retour au board</button>
+    </div>
+  </div>
+</div>
+
+<div class="ui container marginTopL segment bglight">
+  <h1 class="ui header">
+    <div class="content">Détail de la commande N°{{@model.order.id}}<br></div>
+    <div class="ui segment">
+      <h2>Client</h2>
+      <p class="info-client">Nom: {{@model.client.name}}</p>
+      <p class="info-client">Email: {{@model.client.email}}</p>
+    </div>
+  </h1>
+  <div class="ui segment">
+
+  </div>
+</div>
 {{outlet}}

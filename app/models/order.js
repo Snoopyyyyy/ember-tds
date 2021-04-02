@@ -1,4 +1,4 @@
-import Model, { attr, belongsTo } from '@ember-data/model';
+import Model, { attr, belongsTo, hasMany } from '@ember-data/model';
 
 export default class OrderModel extends Model {
   @attr('Date') dateCreation;
@@ -10,4 +10,5 @@ export default class OrderModel extends Model {
   @attr('number') itemsNumber;
   @attr('number') missingNumber;
   @belongsTo('timeslot') timeslot;
+  @hasMany('orderdetail') orderdetail;
 }

@@ -53,3 +53,10 @@
 body {
   background-color: #444444!important;
 }
+
+.info-client {
+  font-size: medium!important;
+  font-style: italic!important;
+  margin: 0!important;
+  padding: 0!important;
+}
