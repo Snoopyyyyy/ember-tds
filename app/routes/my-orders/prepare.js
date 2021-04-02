@@ -29,4 +29,9 @@ export default class MyOrdersPrepareRoute extends Abstractroute {
   back() {
     this.transitionTo('myOrders.index');
   }
+
+  @action
+  toggle(orderdetail) {
+    orderdetail.save();
+  }
 }
