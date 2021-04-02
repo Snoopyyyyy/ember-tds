@@ -31,6 +31,6 @@ export default class BoardRoute extends Abstractroute {
 
   @action
   goOrder() {
-    this.transitionTo('myOrders');
+    this.transitionTo('myOrders.index');
   }
 }

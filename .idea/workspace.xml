@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="acd9ce3f-8218-4391-974f-60398f86198b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/board.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/my-orders.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/my-orders.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/routes/my-orders-test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +140,9 @@
       <workItem from="1617046396834" duration="1539000" />
       <workItem from="1617239277752" duration="725000" />
       <workItem from="1617287374250" duration="2139000" />
+      <workItem from="1617319450223" duration="1794000" />
+      <workItem from="1617321261056" duration="431000" />
+      <workItem from="1617354925019" duration="416000" />
     </task>
     <servers />
   </component>

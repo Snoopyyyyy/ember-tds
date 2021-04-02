@@ -1,7 +1,7 @@
-import Abstractroute from './Abstractroute';
 import { action } from '@ember/object';
+import Abstractroute from '../Abstractroute';
 
-export default class MyOrdersRoute extends Abstractroute {
+export default class MyOrdersIndexRoute extends Abstractroute {
   model() {
     if (this.userAuth.isAuth) {
       this.employee = this.userAuth.getUser();
