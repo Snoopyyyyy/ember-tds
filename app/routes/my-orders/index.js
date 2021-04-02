@@ -7,6 +7,7 @@ export default class MyOrdersIndexRoute extends Abstractroute {
       this.employee = this.userAuth.getUser();
       return this.store.query('order', {
         filter: { idEmployee: this.employee.id },
+        include: 'user',
       });
     }
   }

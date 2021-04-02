@@ -19,23 +19,57 @@
 
 <div class="ui container marginTopL segment bglight">
   <h1 class="ui header">
-    <div class="content">Détail de la commande N°{{@model.id}}<br></div>
-    <div class="ui segment">
+    <div class="content">Détail de la commande N°{{@model.id}}</div>
+    <button class="ui grey button right floated" {{action "back"}}>retour</button>
+  </h1>
+
+  <div class="ui segment grid">
+    <div class="ui height wide column">
+      <h2>Commande</h2>
+      <p class="info-client">Prix: {{@model.amount}} €</p>
+      <p class="info-client">Quantité: {{@model.itemsNumber}}</p>
+    </div>
+    <div class="ui height wide column">
       <h2>Client</h2>
       <p class="info-client">Nom: {{@model.user.name}}</p>
       <p class="info-client">Email: {{@model.user.email}}</p>
     </div>
-  </h1>
+  </div>
+
   <div class="ui segment">
-    {{#each this.sections as |section|}}
-      <li>{{section.value}}
-        <ul>
-          {{#each section.items as |orderdetail|}}
-            <li>{{orderdetail.product.name}}</li>
-          {{/each}}
-        </ul>
-      </li>
-    {{/each}}
+    <h2>Produit à préparer</h2>
+    <div class="ui segment">
+      <table class="ui very basic table">
+        {{#each this.sections as |section|}}
+          <tr>
+            <td colspan="4">
+              <div class="ui inverted violet segment">
+                <h1 class="ui header">
+                  <div class="content">{{section.value}}</div>
+                </h1>
+              </div>
+            </td>
+          </tr>
+            {{#each section.items as |orderdetail|}}
+            <tr>
+              <td class="collapsing"><span class="bold">Nom: </span>{{orderdetail.product.name}}</td>
+              <td><span class="bold">Prix: </span>{{orderdetail.product.price}}</td>
+              <td class="collapsing"><span class="bold">Quantité: </span>{{orderdetail.quantity}}</td>
+              <td class="collapsing"><button {{action "toggle" @model orderdetail}}>préparer</button></td>
+            </tr>
+            {{/each}}
+        {{/each}}
+      </table>
+    </div>
+  </div>
+
+  <div class="ui segment">
+    <h2>Avencement</h2>
+    <div class="ui segment">
+      <UiProgress class="indicating" @value="{{this.length}}" @progress="{{this.length}}" @total="{{this.max}}" >
+        <div class="bar"></div>
+      </UiProgress>
+    </div>
   </div>
 </div>
 {{outlet}}
