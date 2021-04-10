@@ -1,9 +1,10 @@
-# Gestion d'entrepôt en ligne
+# Préparation des commandes
 
 ## I. Presentation
 Nous avions pour but de créer une application web affin de permettre au  
-employé de pouvoir interagir avec leur stock en ligne. Mais aussi de pouvoir  
-voir leur commande à préparer restante.
+employé de pouvoir interagire avec leur commandes à préparer restante.  
+Pour chaque command, l'empoyee peut afficher les details de cette commande  
+affin de pouvoir renseigner les produit préparer
 
 
 -------------
@@ -12,7 +13,7 @@ voir leur commande à préparer restante.
 ## II. Outils utilisé
 Pour réaliser ce projet, nous avons utilisé les outils suivant :  
 * Le cadriciel [Ember JS](https://emberjs.com/)  
-* Une server [XAMPP](https://www.apachefriends.org/fr/index.html)  
+* Un server [XAMPP](https://www.apachefriends.org/fr/index.html)  
 * Le gestionnaire de dépendances PHP [composer](https://getcomposer.org/)
 * [Semantic ui](https://semantic-ui.com/) pour le style graphique de mon application
 
@@ -20,12 +21,11 @@ Pour réaliser ce projet, nous avons utilisé les outils suivant :
 -------------
 ## III. Fonctionnement & Prise en main du site
 Quand vous arriver sur le site, vous devez vous connecter avec vos identifiant d'employée.  
-Une fois que vous êtes connecté, vous avez access a votre __board__ qui vous permet de voir   
-la liste des commandes qui vous ai assigné. Vous pouvez également consulter la gestion des stocks.  
-La page __gestion des stocks__ vous donne access a toutes les sections de produit de votre store  
-mais également a la liste des produits contenue dans votre section.  
-Vous avez également la possibilité de modifier vos sections (en ajoutant un nouveau produit,  
-en modifiant le nom de vos section, en créant de nouvelle section, ...)
+Une fois que vous êtes connecté, vous avez access a votre __board__ qui vous permet de choissir  
+entre la gestion du stock ou les commands restantes.  
+La page __Commandes__ vous donne access a toutes les commandes qu'il vous reste a préparer    
+mais également a la liste des produits contenue dans cette command que vous devait aussi préparer ou non.  
+Vous avez également la possibilité de modifier le status de votre command ou bien de supprimer cette commande de votre liste.  
 
 
 -------------
